@@ -12,7 +12,8 @@ services:
     networks:
       - red
     volumes:
-      - /db/:/var/lib/mysql
+      #- /db/:/var/lib/mysql
+      - /mnt/d/baseDatos/datos/:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=12345678
       - MYSQL_PASSWORD=12345678
@@ -28,6 +29,7 @@ services:
       - red
     # volumes:
     #   - /loud/:/var/www/html
+    - /mnt/d/baseDatos/config/:/var/www/html
     environment:
       - NEXTCLOUD_TRUSTED_DOMAINS=192.168.0.84
       - NEXTCLOUD_ADMIN_USER=admin
